@@ -243,3 +243,50 @@ a {
     text-align: center;
   }
 }
+/* ---------- About Page Layout ---------- */
+.about-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 8%;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 3rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.about-card h1 {
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.about-text {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .about-card {
+    padding: 2rem 1.5rem;
+  }
+  .about-card h1 {
+    font-size: 2.2rem;
+  }
+}
