@@ -290,3 +290,120 @@ a {
     font-size: 2.2rem;
   }
 }
+/* ---------- Contact Page Styling (Centered & Stylish) ---------- */
+
+@import url('https://googleapis.com');
+
+.contact-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 8%;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', "Segoe UI", sans-serif;
+}
+
+.contact-content-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-content-centered h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  letter-spacing: -2px;
+  text-transform: lowercase;
+}
+
+.funny-subheading {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 4.5rem;
+  max-width: 600px;
+  line-height: 1.6;
+  letter-spacing: -0.2px;
+}
+
+.contact-list-centered {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start; 
+  margin: 0 auto;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-row:hover {
+  transform: translateX(10px);
+}
+
+.icon-circle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+
+.github-brand { background: #4a284a; border: 2px solid var(--accent); }
+.linkedin-brand { background: #5c305c; border: 2px solid var(--accent); }
+.email-brand { background: #733c73; border: 2px solid var(--accent); }
+
+.contact-row:hover .icon-circle {
+  background: var(--accent);
+  color: #1e121e;
+  box-shadow: 0 0 20px rgba(220, 167, 221, 0.6);
+}
+
+.row-label {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.contact-row:hover .row-label {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .contact-content-centered h1 {
+    font-size: 3.2rem;
+  }
+  .funny-subheading {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  .contact-list-centered {
+    align-items: center;
+  }
+  .contact-row:hover {
+    transform: scale(1.05); /* Scales upward rather than sliding on mobile screens */
+  }
+}
