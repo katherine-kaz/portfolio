@@ -407,3 +407,201 @@ a {
     transform: scale(1.05); /* Scales upward rather than sliding on mobile screens */
   }
 }
+/* ---------- Mobile Navigation Bar Extensions ---------- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 968px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #1e121e;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: right 0.4s cubic-bezier(0.1, 1, 0.1, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    border-left: 1px solid var(--glass-border);
+  }
+
+  .nav-links.mobile-active {
+    right: 0;
+  }
+
+  /* Hamburger to 'X' animation morphing */
+  .toggle-transform span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background-color: var(--accent);
+  }
+  .toggle-transform span:nth-child(2) {
+    opacity: 0;
+  }
+  .toggle-transform span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    background-color: var(--accent);
+  }
+}
+/* ---------- Premium Data Analyst Skills Charts ---------- */
+.skills-page-container {
+  flex: 1;
+  padding: 4rem 4%;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.skills-intro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.skills-intro h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+
+.skills-intro p {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 3rem;
+}
+
+.chart-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.chart-card h2 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 3.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.bar-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 280px;
+  border-bottom: 2px solid var(--glass-border);
+  padding-bottom: 15px;
+  gap: 10px;
+}
+
+.chart-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+  min-width: 0; 
+}
+
+.bar-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bar-fill {
+  width: 28px;
+  height: 25px; 
+  background: var(--accent-dark);
+  border: 1px solid var(--accent);
+  border-radius: 6px 6px 0 0;
+  transition: height 0.6s cubic-bezier(0.25, 1, 0.5, 1), background 0.3s;
+}
+
+.chart-column:hover .bar-fill {
+  height: var(--bar-height);
+  background: var(--accent);
+  box-shadow: 0 0 15px rgba(220, 167, 221, 0.4);
+}
+
+.bar-label {
+  margin-top: 20px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  transition: color 0.3s;
+  display: block;
+}
+
+/* Rotates the longer text labels downward safely so they never squish together */
+.chart-card:nth-child(2) .bar-label {
+  white-space: normal;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+.chart-column:hover .bar-label {
+  color: var(--text-primary);
+}
+
+@media (max-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-intro h1 {
+    font-size: 2.5rem;
+  }
+  .bar-chart {
+    height: 220px;
+  }
+  .bar-fill {
+    width: 18px;
+  }
+  .bar-label {
+    font-size: 0.75rem;
+  }
+}

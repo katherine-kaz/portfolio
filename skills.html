@@ -5,14 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills | Kusuma</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
   <header class="navbar">
     <a href="index.html" class="logo">Kusuma</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="skills.html" class="active">Skills</a></li>
@@ -22,9 +26,122 @@
     </nav>
   </header>
 
-  <main class="page-container">
-    <h1>My Skills</h1>
-    <p>Placeholder for animated Python, SQL, and Web technology grid counters.</p>
+  <main class="skills-page-container">
+    <div class="skills-intro">
+      <h1>SKILLS & PROFICIENCY</h1>
+      <p>Visual representation of my current skill familiarity.</p>
+    </div>
+
+    <div class="charts-grid">
+      
+      <!-- CHART 1: TECHNICAL TOOLS -->
+      <div class="chart-card">
+        <h2>01 / Technical Tools</h2>
+        <div class="bar-chart">
+          
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 70%;"></div>
+            </div>
+            <span class="bar-label">Python</span>
+          </div>
+
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 45%;"></div>
+            </div>
+            <span class="bar-label">SQL</span>
+          </div>
+
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 60%;"></div>
+            </div>
+            <span class="bar-label">Pandas</span>
+          </div>
+
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 80%;"></div>
+            </div>
+            <span class="bar-label">Matplotlib</span>
+          </div>
+
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 50%;"></div>
+            </div>
+            <span class="bar-label">Excel</span>
+          </div>
+
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 50%;"></div>
+            </div>
+            <span class="bar-label">Git</span>
+          </div>
+
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 80%;"></div>
+            </div>
+            <span class="bar-label">HTML/CSS/JS</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CHART 2: ANALYTICAL & PROFESSIONAL SKILLS -->
+      <div class="chart-card">
+        <h2>02 / Analytical & Professional</h2>
+        <div class="bar-chart">
+          
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 95%;"></div>
+            </div>
+            <span class="bar-label">Analytical Thinking</span>
+          </div>
+
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 80%;"></div>
+            </div>
+            <span class="bar-label">Problem Solving</span>
+          </div>
+
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 60%;"></div>
+            </div>
+            <span class="bar-label">Research</span>
+          </div>
+
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 72%;"></div>
+            </div>
+            <span class="bar-label">Leadership & Initiative</span>
+          </div>
+
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 75%;"></div>
+            </div>
+            <span class="bar-label">Communication</span>
+          </div>
+
+          <div class="chart-column">
+            <div class="bar-wrapper">
+              <div class="bar-fill" style="--bar-height: 92%;"></div>
+            </div>
+            <span class="bar-label">Self-Learning</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
   </main>
 
   <footer class="footer">
@@ -34,10 +151,11 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
-        <a href="https://github.com" target="_blank">Git Profile</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
