@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Kusuma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">Kusuma</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="projects-page-container">
+    <div class="projects-intro">
+      <h1>projects & work</h1>
+      <p>A structured index of my academic software systems, natural language research models, and predictive pipelines.</p>
+    </div>
+
+    <div class="projects-vertical-stack">
+      
+      <!-- PROJECT 1: GENERATIVE AI NLP ARCHITECTURE -->
+      <div class="project-card-premium">
+        <div class="project-header-row">
+          <div>
+            <span class="project-meta-tag">Natural Language Processing / GenAI</span>
+            <h3>Comparative Analysis of Transformer-Based Generative AI Models for Automatic News Text Summarization</h3>
+          </div>
+          <a href="https://github.com/katherine-kaz/research-Paper" target="_blank" class="outline-repo-btn">Source Code</a>
+        </div>
+        
+        <div class="project-details-grid">
+          <div class="details-block">
+            <h4>Description</h4>
+            <p>A data science study evaluating and benchmarking pre-trained Large Language Model architectures to automatically output abstractive summaries of news media files. The performance metrics of different models were evaluated against human gold-standard summaries to find the absolute optimized engine.</p>
+          </div>
+          <div class="details-block">
+            <h4>Tools & Technologies</h4>
+            <p>Python, Generative AI, Transformer Architectures (Hugging Face API), T5-Small, FLAN-T5-Small, BART-Large-CNN, Pandas, BBC News Summary Dataset, ROUGE & BLEU Evaluation Metrics.</p>
+          </div>
+          <div class="details-block">
+            <h4>Contributions & Learning Outcomes</h4>
+            <p>Sampled and prepared the news text matrices for model experimentation. Generated language summaries from raw files, calculated error matrices using ROUGE/BLEU pipelines, and mathematically determined BART-Large-CNN as the highest-performing architecture for automatic summarization.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2: DIABETIC READMISSION DATA INSIGHT PIPELINE -->
+      <div class="project-card-premium">
+        <div class="project-header-row">
+          <div>
+            <span class="project-meta-tag">Data Science & Analytics</span>
+            <h3>Diabetes Hospital Readmission Analysis</h3>
+          </div>
+          <a href="https://github.com/katherine-kaz/diabetic-readmission-analysis" target="_blank" class="outline-repo-btn">Source Code</a>
+        </div>
+        
+        <div class="project-details-grid">
+          <div class="details-block">
+            <h4>Description</h4>
+            <p>An exhaustive data analysis pipeline exploring a complex clinical dataset containing <strong>101,766 records across 50 data columns</strong>. The project builds data profiles to trace hospital readmission patterns, mapping factors causing a total 46.09% return rate, specifically highlighting the high-risk 70–80 age bracket.</p>
+            <div class="stats-box">
+              <h5>Quick Stats Matrix:</h5>
+              <ul>
+                <li><strong>Dataset Capacity:</strong> 101,766 patients | 50 columns</li>
+                <li><strong>Not Readmitted:</strong> 53.91% (54,864 patients)</li>
+                <li><strong>Readmitted > 30 Days:</strong> 34.93% (35,545 patients)</li>
+                <li><strong>Readmitted < 30 Days:</strong> 11.16% (11,357 patients)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="details-block">
+            <h4>Tools & Technologies</h4>
+            <p>Python, Pandas, NumPy, Matplotlib, Seaborn, Google Colab / Jupyter Notebooks (`project1.ipynb`, `report.md`).</p>
+          </div>
+          <div class="details-block">
+            <h4>Contributions & Learning Outcomes</h4>
+            <p>Performed extensive data inspection, stripped invalid null strings, handled missing values, and eliminated duplicate records. Generated demographic distributions and comparative plots mapping urgent versus chronic stay categories. Concluded that digital home tracking metrics and centralized communication remove conflicting treatment threats among seniors.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: JAVA SWING INVOICE SYSTEM -->
+      <div class="project-card-premium">
+        <div class="project-header-row">
+          <div>
+            <span class="project-meta-tag">Java GUI Application</span>
+            <h3>Online Order Processing & Invoice Generation System</h3>
+          </div>
+          <a href="https://github.com/katherine-kaz/Online-Order-Processing-and-Invoice-Generation-System" target="_blank" class="outline-repo-btn">Source Code</a>
+        </div>
+        
+        <div class="project-details-grid">
+          <div class="details-block">
+            <h4>Description</h4>
+            <p>A graphical desktop application engineered to accept user entry variables for inventory components, isolate runtime formatting faults via calculation bounds, and translate variables into systematic line invoices.</p>
+          </div>
+          <div class="details-block">
+            <h4>Tools & Technologies</h4>
+            <p>Core Java, Java Swing GUI Engine (JFrame, JTextField, JButton), Eclipse IDE workspace, Action Listeners, Encapsulation, Text Processing Streams.</p>
+          </div>
+          <div class="details-block">
+            <h4>Contributions & Learning Outcomes</h4>
+            <p>Designed the Swing layout view layers. Programmed calculation operations, error tracking blocks, text filing actions, and discrete data validation filters across standalone interface layers.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 4: C MINI TRACKER -->
+      <div class="project-card-premium">
+        <div class="project-header-row">
+          <div>
+            <span class="project-meta-tag">Systems & Console Logic</span>
+            <h3>Mini Attendance Tracker System</h3>
+          </div>
+          <a href="https://github.com/katherine-kaz/mini-attendance-Tracker" target="_blank" class="outline-repo-btn">Source Code</a>
+        </div>
+        
+        <div class="project-details-grid">
+          <div class="details-block">
+            <h4>Description</h4>
+            <p>A menu-driven system managing structural attendance records for bounded class vectors up to 60 indices. Runs logical controls to process states, safely scan string frames, and compute precision session percentages.</p>
+          </div>
+          <div class="details-block">
+            <h4>Tools & Technologies</h4>
+            <p>C Programming Language, MinGW-GCC Compiler, 1D Character Arrays, Loop Invariants, `switch-case` Branches, Character Sanitization, Formatted Floating Outputs.</p>
+          </div>
+          <div class="details-block">
+            <h4>Contributions & Learning Outcomes</h4>
+            <p>Constructed the operational loop structures, text menus, and index adjustment operations. Implemented defensive input processing filters via `fgets()` and `sscanf()` to reject input out of range errors.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Kusuma. All rights reserved.</p>
+      <div class="quick-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
