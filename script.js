@@ -17,14 +17,34 @@ document.addEventListener('DOMContentLoaded', () => {
     greetingElement.innerHTML = `${greetingText}, I'm <span>Kusuma</span>`;
   }
 
-  // FEATURE 2: RESPONSIVE MOBILE NAVIGATION MENU
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
+  const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile-active');
-      menuToggle.classList.toggle('toggle-transform');
-    });
+if (menuToggle && navLinks) {
+  function closeMenu() {
+    navLinks.classList.remove("mobile-active");
+    menuToggle.classList.remove("toggle-transform");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
   }
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("mobile-active");
+
+    menuToggle.classList.toggle("toggle-transform", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeMenu();
+  });
+}
 });
