@@ -19,8 +19,8 @@ A responsive personal portfolio website developed using **HTML5, CSS3, and JavaS
 
 | Technology | Purpose |
 |---|---|
-| HTML5 | Structures the website content. |
-| CSS3 | Handles styling, layouts, and responsive design. |
+| HTML | Structures the website content. |
+| CSS | Handles styling, layouts, and responsive design. |
 | JavaScript | Adds dynamic content and interactive features. |
 | Git | Tracks changes to the source code. |
 | GitHub | Hosts the source code repository. |
